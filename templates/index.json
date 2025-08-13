@@ -1,0 +1,37 @@
+{
+    "sections": {
+        "image_with_text": {
+            "type": "image_with_text"
+        },
+        "featured_products": {
+            "type": "featured_products"
+        },
+        "featured_collections": {
+            "type": "featured_collections",
+            "blocks": {
+                "block": {
+                    "type": "block",
+                    "name": "Block"
+                }
+            },
+            "block_order": [
+                "block"
+            ]
+        },
+        "blog_posts": {
+            "type": "blog_posts"
+        },
+        "custom_liquid": {
+            "type": "custom_liquid"
+        }
+    },
+    "layout": "theme",
+    "wrapper": "main.main-wrapper",
+    "order": [
+        "image_with_text",
+        "featured_products",
+        "featured_collections",
+        "blog_posts",
+        "custom_liquid"
+    ]
+}
