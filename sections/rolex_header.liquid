@@ -47,7 +47,7 @@
           <img width="auto" height="auto" alt="inherit" src="https://cdn.prod.website-files.com/689c58e0dedcc06aa56ee217/689d81ea753c260ebf0ac77a_Rolex-retailer-plaque-250x125_en.jpg" loading="lazy">
         </a>
         <div class="rolex_header-content">
-          <a class="rolex_header_link" href="{{ section.settings.url_link }}"> <div> Discover rolex </div> </a>
+          <a class="rolex_header_link" href="{{ section.settings.url_button_link }}"> <div> Discover rolex </div> </a>
           <a class="rolex_header_link" href="{{ section.settings.url_link }}"> <div> Rolex watches </div> </a>
           <a class="rolex_header_link">
             <div>
@@ -82,6 +82,11 @@
     "name": "Rolex Header",
     "class": "section-rolex_header",
     "settings": [
+        {
+            "id": "url_button_link",
+            "type": "url",
+            "label": "Button-Link"
+        },
         {
             "id": "url_link",
             "type": "url",

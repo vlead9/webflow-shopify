@@ -18,6 +18,11 @@
         "text_button_text": "More Information"
       }
     },
+    "rolex_header_bjNKQ4": {
+      "type": "rolex_header",
+      "name": "Rolex Header",
+      "settings": {}
+    },
     "featured_products": {
       "type": "featured_products",
       "settings": {
@@ -120,6 +125,7 @@
   "wrapper": "main.main-wrapper",
   "order": [
     "image_with_text",
+    "rolex_header_bjNKQ4",
     "featured_products",
     "featured_collections",
     "featured_collections_new_KtGURX",
