@@ -2,6 +2,42 @@
   .section-rolex_header {
     background-image: linear-gradient(90deg, #0b3e27, #197149)
   }
+  .container-large {
+    width: 100%;
+     max-width: 85rem;
+     margin-right: auto;
+     margin-left: auto
+  }
+  .more_liste {
+    display: grid;
+     grid-column-gap: 2rem;
+     grid-row-gap: 2rem;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: auto
+  }
+  .more_liste.medium {
+    grid-template-columns: 1fr 1fr
+  }
+  @media screen and (max-width: 767px) {
+    .more_liste {
+      grid-row-gap: 3rem;
+       grid-template-columns: 1fr
+    }
+  }
+  .hide {
+    display: none;
+     flex-grow: 1;
+     flex-shrink: 1;
+     flex-basis: 0%}
+  .rolex_header_logo {
+    width: 7rem
+  }
+  .rolex_header-wrap {
+    display: flex;
+     min-height: 6rem;
+     justify-content: space-between;
+     align-items: center
+  }
   .padding-global {
     padding-right: 2.5rem;
      padding-left: 2.5rem
@@ -12,33 +48,6 @@
        padding-left: 1.25rem
     }
   }
-  .container-large {
-    width: 100%;
-     max-width: 85rem;
-     margin-right: auto;
-     margin-left: auto
-  }
-  .rolex_header-wrap {
-    display: flex;
-     min-height: 6rem;
-     justify-content: space-between;
-     align-items: center
-  }
-  .rolex_header_logo {
-    width: 7rem
-  }
-  .rolex_header-content {
-    display: flex;
-     grid-column-gap: 1rem;
-     grid-row-gap: 1rem
-  }
-  .rolex_header_link {
-    color: white;
-     font-weight: 700
-  }
-  .rolex_header_link:hover {
-    color: #5fbc93
-  }
 </style>
   <div class="padding-global">
     <div class="container-large">
@@ -46,14 +55,15 @@
         <a class="rolex_header_logo">
           <img width="auto" height="auto" alt="inherit" src="https://cdn.prod.website-files.com/689c58e0dedcc06aa56ee217/689d81ea753c260ebf0ac77a_Rolex-retailer-plaque-250x125_en.jpg" loading="lazy">
         </a>
-        <div class="rolex_header-content">
-          <a class="rolex_header_link" href="{{ section.settings.url_link }}"> <div>{{ section.settings.text_heading }}</div> </a>
-          <a class="rolex_header_link" href="{{ section.settings.url_link }}"> <div>{{ section.settings.text_heading }}</div> </a>
-          <a class="rolex_header_link" href="{{ section.settings.url_link }}"> <div>{{ section.settings.text_heading }}</div> </a>
-          <a class="rolex_header_link" href="{{ section.settings.url_link }}"> <div>{{ section.settings.text_heading }}</div> </a>
-          <a class="rolex_header_link" href="{{ section.settings.url_link }}"> <div>{{ section.settings.text_heading }}</div> </a>
-          <a class="rolex_header_link" href="{{ section.settings.url_link }}"> <div>{{ section.settings.text_heading }}</div> </a>
-          <a class="rolex_header_link" href="{{ section.settings.url_link }}"> <div>{{ section.settings.text_heading }}</div> </a>
+        <div class="more_list-wrapper" data-dyn-type="wrapper">
+          <div class="more_liste" li-content-for-theme-blocks="" data-dyn-type="list">
+{% content_for 'blocks' %}
+</div>
+          <div class="hide" data-dyn-type="empty">
+            <div>
+                No items found.
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -61,24 +71,23 @@
     "tag": "section",
     "name": "Rolex Header",
     "class": "section-rolex_header",
-    "settings": [
+    "blocks": [
         {
-            "id": "url_link",
-            "type": "url",
-            "label": "Link"
+            "type": "block"
         },
         {
-            "id": "text_heading",
-            "type": "text",
-            "label": "Heading",
-            "default": "\n                Discover rolex\n            "
+            "type": "@app"
         }
     ],
     "presets": [
         {
             "name": "Rolex Header",
             "category": "Liquify",
-            "blocks": []
+            "blocks": [
+                {
+                    "type": "block"
+                }
+            ]
         }
     ]
 } {% endschema %}
