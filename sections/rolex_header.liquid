@@ -1,6 +1,23 @@
-<style>
-  .section-rolex_header {
-    background-image: linear-gradient(90deg, #0b3e27, #197149)
+<section class="navbar5_component">
+  <style>
+  .navbar5_component {
+    display: flex;
+     width: 100%;
+     height: 6rem;
+     align-items: center;
+     border-bottom-style: solid;
+     border-bottom-width: 0px;
+     border-bottom-color: ;
+     background-image: linear-gradient(90deg, #0b3e27, #197149)
+  }
+  @media screen and (max-width: 767px) {
+    .navbar5_component {
+      min-height: 4rem
+    }
+  }
+  .navbar5_component.medium {
+    height: 5rem;
+     background-image: linear-gradient(90deg, #0b3e27, #197149)
   }
   .container-large {
     width: 100%;
@@ -8,33 +25,79 @@
      margin-right: auto;
      margin-left: auto
   }
-  .more_liste {
-    display: grid;
-     grid-column-gap: 2rem;
-     grid-row-gap: 2rem;
-     grid-template-columns: 1fr 1fr 1fr;
-     grid-template-rows: auto
+  .navbar5_menu-left {
+    display: flex
   }
-  .more_liste.medium {
-    grid-template-columns: 1fr 1fr
+  .navbar5_menu-left.medium {
+    flex-direction: column;
+     justify-content: flex-start;
+     flex-wrap: nowrap;
+     align-items: flex-start
   }
-  @media screen and (max-width: 767px) {
-    .more_liste {
-      grid-row-gap: 3rem;
-       grid-template-columns: 1fr
-    }
-  }
-  .hide {
-    display: none;
+  .navbar5_menu {
+    position: static;
+     display: flex;
+     height: 100%;
+     margin-left: 1.5rem;
+     justify-content: flex-end;
+     align-items: center;
      flex-grow: 1;
      flex-shrink: 1;
      flex-basis: 0%}
+  .navbar5_menu.medium {
+    position: absolute;
+     overflow: auto;
+     height: auto;
+     margin-left: 0rem;
+     padding-top: 1rem;
+     padding-right: 5%;
+     padding-bottom: 2rem;
+     padding-left: 5%;
+     justify-content: flex-start;
+     align-items: center;
+     border-bottom-style: solid;
+     border-bottom-width: 1px;
+     border-bottom-color: ;
+     background-image: linear-gradient(90deg, #0b3e27, #197149);
+     transition-property: height;
+     transition-duration: 500ms;
+     transition-timing-function: ease;
+     background-clip: border-box
+  }
+  @media screen and (max-width: 767px) {
+    .navbar5_menu {
+      padding-bottom: 6rem
+    }
+  }
   .rolex_header_logo {
     width: 7rem
   }
-  .rolex_header-wrap {
+  .navbar5_link {
+    padding-top: 1.5rem;
+     padding-right: 1rem;
+     padding-bottom: 1.5rem;
+     padding-left: 1rem;
+     color: white;
+     font-weight: 700
+  }
+  .navbar5_link.medium {
+    width: auto;
+     margin-right: 0px;
+     margin-left: 0px;
+     padding-top: 0.75rem;
+     padding-right: 0rem;
+     padding-bottom: 0.75rem;
+     padding-left: 0rem;
+     font-size: 1.125rem
+  }
+  .navbar5_link.main_current {
+    color: 
+  }
+  .navbar5_container {
     display: flex;
-     min-height: 6rem;
+     width: 100%;
+     height: 100%;
+     max-width: 100%;
      justify-content: space-between;
      align-items: center
   }
@@ -48,46 +111,69 @@
        padding-left: 1.25rem
     }
   }
+  .rolex_header-icon {
+    display: flex;
+     width: 1rem;
+     height: 1rem;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center
+  }
+  .rolex_header-icon.medium {
+    width: 1.6rem;
+     height: 1.6rem
+  }
+  .navbar5_menu-button {
+    padding-top: 0rem;
+     padding-right: 0rem;
+     padding-bottom: 0rem;
+     padding-left: 0rem
+  }
+  .navbar5_menu-button.medium_open {
+    background-color: transparent
+  }
 </style>
-  <div class="padding-global">
-    <div class="container-large">
-      <div class="rolex_header-wrap">
-        <a class="rolex_header_logo">
-          <img width="auto" height="auto" alt="inherit" src="https://cdn.prod.website-files.com/689c58e0dedcc06aa56ee217/689d81ea753c260ebf0ac77a_Rolex-retailer-plaque-250x125_en.jpg" loading="lazy">
-        </a>
-        <div class="more_list-wrapper" data-dyn-type="wrapper">
-          <div class="more_liste" li-content-for-theme-blocks="" data-dyn-type="list">
-{% content_for 'blocks' %}
-</div>
-          <div class="hide" data-dyn-type="empty">
-            <div>
-                No items found.
+    <div class="padding-global max-width-full">
+      <div class="container-large">
+        <div class="navbar5_container">
+          <a class="rolex_header_logo" href="#">
+            <img width="auto" height="auto" alt="inherit" src="https://cdn.prod.website-files.com/689c58e0dedcc06aa56ee217/689d81ea753c260ebf0ac77a_Rolex-retailer-plaque-250x125_en.jpg" loading="lazy">
+          </a>
+          <nav class="navbar5_menu" role="navigation">
+            <div class="navbar5_menu-left">
+              <a class="navbar5_link" href="#">
+                  Discover Rolex
+              </a>
+              <a class="navbar5_link" href="#">
+                  Rolex watches
+              </a>
+              <a class="navbar5_link" href="#">
+                  New Watches 2025
+              </a>
+            </div>
+          </nav>
+          <div class="navbar5_menu-button">
+            <div class="menu-icon1">
+              <div>
+                  Menu
+              </div>
+              <div class="rolex_header-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"></path></svg>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div> {% schema %} {
-    "tag": "section",
+  </section> {% schema %} {
+    "tag": "div",
     "name": "Rolex Header",
-    "class": "section-rolex_header",
-    "blocks": [
-        {
-            "type": "block"
-        },
-        {
-            "type": "@app"
-        }
-    ],
+    "class": "navbar5_component",
     "presets": [
         {
             "name": "Rolex Header",
             "category": "Liquify",
-            "blocks": [
-                {
-                    "type": "block"
-                }
-            ]
+            "blocks": []
         }
     ]
 } {% endschema %}
