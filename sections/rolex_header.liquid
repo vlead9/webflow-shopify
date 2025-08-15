@@ -1,142 +1,39 @@
-<style>
-  .section-rolex_header {
-    position: relative;
-     background-image: linear-gradient(90deg, #0b3e27, #197149)
-  }
-  .rolex_header-burger-wrap {
-    display: none;
-     width: 5rem;
-     height: 5rem;
-     justify-content: flex-end;
-     align-items: center;
-     color: white;
-     font-weight: 700
-  }
-  .rolex_header-burger-wrap.medium {
-    display: flex
-  }
-  .container-large {
-    width: 100%;
-     max-width: 85rem;
-     margin-right: auto;
-     margin-left: auto
-  }
-  .rolex_header_link {
-    color: white;
-     font-weight: 700
-  }
-  .rolex_header_link:hover {
-    color: #5fbc93
-  }
-  .rolex_header-menu-wrap {
-    position: absolute;
-     left: 0%;
-     top: 6rem;
-     right: 0%;
-     bottom: auto;
-     display: none
-  }
-  .rolex_header-menu-content {
-    display: flex;
-     padding-bottom: 3rem;
-     flex-direction: column;
-     justify-content: flex-start;
-     flex-wrap: nowrap;
-     align-items: flex-start;
-     grid-column-gap: 1rem;
-     grid-row-gap: 1rem
-  }
-  .rolex_header_logo {
-    width: 7rem
-  }
-  .rolex_header-content {
-    display: flex;
-     justify-content: flex-end;
-     align-items: center;
-     grid-column-gap: 1rem;
-     grid-row-gap: 1rem
-  }
-  .rolex_header-content.medium {
-    display: none
-  }
-  .rolex_header-wrap {
-    display: flex;
-     min-height: 6rem;
-     justify-content: space-between;
-     align-items: center
-  }
-  .padding-global {
-    padding-right: 2.5rem;
-     padding-left: 2.5rem
-  }
-  @media screen and (max-width: 767px) {
-    .padding-global {
-      padding-right: 1.25rem;
-       padding-left: 1.25rem
-    }
-  }
-  .rolex-gradient {
-    z-index: 99
-  }
-  .rolex_header-icon {
-    display: flex;
-     width: 1.6rem;
-     height: 1.6rem;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center
-  }
-  .rolex_header-icon.medium {
-    width: 1.6rem;
-     height: 1.6rem
-  }
-</style>
-  <div class="padding-global">
-    <div class="container-large">
-      <div class="rolex_header-wrap">
-        <a class="rolex_header_logo">
-          <img width="auto" height="auto" alt="inherit" src="https://cdn.prod.website-files.com/689c58e0dedcc06aa56ee217/689d81ea753c260ebf0ac77a_Rolex-retailer-plaque-250x125_en.jpg" loading="lazy">
-        </a>
-        <div class="rolex_header-content">
-          <a class="rolex_header_link" href="{{ section.settings.url_link }}"> Discover Rolex </a>
-          <a class="rolex_header_link" href="{{ section.settings.url_link }}"> Rolex watches </a>
-          <a class="rolex_header_link" href="{{ section.settings.url_link }}"> New Watches 2025 </a>
-          <a class="rolex_header_link" href="{{ section.settings.url_link }}"> Watchmaking </a>
-          <a class="rolex_header_link" href="{{ section.settings.url_link }}"> Servicing </a>
-          <a class="rolex_header_link" href="{{ section.settings.url_link }}"> World of rolex </a>
-          <a class="rolex_header_link" href="{{ section.settings.url_link }}"> Contact us </a>
-        </div>
-        <div class="rolex_header-burger-wrap">
-          <div>
-              Menu
-          </div>
-          <div class="rolex_header-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5z"></path></svg>
+<div class="padding-global">
+          <div class="container-large">
+            <div class="rolex_header-wrap">
+              <a href="#" class="rolex_header_logo w-inline-block"><img src="{{ 'Rolex-retailer-plaque-250x125_en.jpg' | asset_url }}" loading="lazy" alt=""></a>
+              <div class="rolex_header-content">
+                <a href="{{ section.settings.url_link }}" class="rolex_header_link"> Discover Rolex </a>
+                <a href="{{ section.settings.url_link }}" class="rolex_header_link"> Rolex watches </a>
+                <a href="{{ section.settings.url_link }}" class="rolex_header_link"> New Watches 2025 </a>
+                <a href="{{ section.settings.url_link }}" class="rolex_header_link"> Watchmaking </a>
+                <a href="{{ section.settings.url_link }}" class="rolex_header_link"> Servicing </a>
+                <a href="{{ section.settings.url_link }}" class="rolex_header_link"> World of rolex </a>
+                <a href="{{ section.settings.url_link }}" class="rolex_header_link"> Contact us </a>
+              </div>
+              <div data-w-id="5a4d41ad-c921-96d0-f0e1-bc1ece8e26b9" class="rolex_header-burger-wrap">
+                <div>Menu</div>
+                <div class="rolex_header-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="100%" height="100%" preserveaspectratio="xMidYMid meet" viewbox="0 0 24 24">
+                    <path fill="currentColor" d="m7 10l5 5l5-5z"></path>
+                  </svg></div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="rolex_header-menu-wrap rolex-gradient">
-    <div class="padding-global">
-      <div class="container-large">
-        <div class="rolex_header-menu-content">
-          <a class="rolex_header_link">
-              Discover Rolex
-          </a>
-          <a class="rolex_header_link">
-              Discover Rolex
-          </a>
-          <a class="rolex_header_link">
-              Discover Rolex
-          </a>
+        <div class="rolex_header-menu-wrap rolex-gradient">
+          <div class="padding-global">
+            <div class="container-large">
+              <div class="rolex_header-menu-content">
+                <a href="#" class="rolex_header_link">Discover Rolex</a>
+                <a href="#" class="rolex_header_link">Discover Rolex</a>
+                <a href="#" class="rolex_header_link">Discover Rolex</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div>
-    <style>
-@media only screen and (max-width: 1050px) {
+        <div class="w-embed">
+          <style>
+@media only screen and (max-width: 1160px) {
   .rolex_header-content {
     display: none;
   }
@@ -145,7 +42,7 @@
   }
 }
 </style>
-  </div> {% schema %} {
+        </div> {% schema %} {
     "tag": "section",
     "name": "Rolex Header",
     "class": "section-rolex_header",
