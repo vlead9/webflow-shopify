@@ -983,19 +983,3 @@ document.addEventListener('alpine:init', () => {
         },
     }));
 })
-
-document.addEventListener('page:loaded', function () {
-  const burger = document.querySelector('.rolex_header-burger-wrap');
-  const menu = document.querySelector('.rolex_header-menu-wrap');
-
-  document.addEventListener('click', function (e) {
-    const clickedBurger = burger.contains(e.target);
-    const clickedMenu = menu.contains(e.target);
-
-    if (clickedBurger) {
-      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-    } else if (!clickedMenu) {
-      menu.style.display = 'none';
-    }
-  });
-});
