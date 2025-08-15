@@ -101,6 +101,10 @@
           <a class="rolex_header_link" href="{{ section.settings.url_link }}"> Discover Rolex </a>
           <a class="rolex_header_link" href="{{ section.settings.url_link }}"> Rolex watches </a>
           <a class="rolex_header_link" href="{{ section.settings.url_link }}"> New Watches 2025 </a>
+          <a class="rolex_header_link" href="{{ section.settings.url_link }}"> Watchmaking </a>
+          <a class="rolex_header_link" href="{{ section.settings.url_link }}"> Servicing </a>
+          <a class="rolex_header_link" href="{{ section.settings.url_link }}"> World of rolex </a>
+          <a class="rolex_header_link" href="{{ section.settings.url_link }}"> Contact us </a>
         </div>
         <div class="rolex_header-burger-wrap">
           <div>
@@ -132,7 +136,7 @@
   </div>
   <div>
     <style>
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 1160px) {
   .rolex_header-content {
     display: none;
   }
@@ -160,21 +164,3 @@
         }
     ]
 } {% endschema %}
-
-<script>
-document.addEventListener('page:loaded', function () {
-  const burger = document.querySelector('.rolex_header-burger-wrap');
-  const menu = document.querySelector('.rolex_header-menu-wrap');
-
-  document.addEventListener('click', function (e) {
-    const clickedBurger = burger.contains(e.target);
-    const clickedMenu = menu.contains(e.target);
-
-    if (clickedBurger) {
-      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-    } else if (!clickedMenu) {
-      menu.style.display = 'none';
-    }
-  });
-});
-</script>
