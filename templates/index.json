@@ -21,7 +21,40 @@
     "rolex_header_bjNKQ4": {
       "type": "rolex_header",
       "name": "Rolex Header",
-      "settings": {}
+      "settings": {
+        "text_heading_1": "Discover Rolex",
+        "url_link_1": "",
+        "text_heading_2": "Rolex watches",
+        "url_link_2": "",
+        "text_heading_3": "New Watches 2025",
+        "url_link_3": "",
+        "text_heading_4": "Watchmaking",
+        "url_link_4": "",
+        "text_heading_5": "Servicing",
+        "url_link_5": "",
+        "text_heading_6": "World of Rolex",
+        "url_link_6": "",
+        "text_heading_7": "Contact us",
+        "url_link_7": ""
+      }
+    },
+    "rolex_hero_slider_Xzyc9g": {
+      "type": "rolex_hero_slider",
+      "name": "Rolex Hero Slider",
+      "settings": {
+        "text_subheading_slide_1": "Rolex",
+        "text_heading_slide_1": "Sky-Dweller",
+        "url_button_link_slide_1": "",
+        "text_button_text_slide_1": "Button text",
+        "text_subheading_slide_2": "Rolex",
+        "text_heading_slide_2": "Sky-Dweller",
+        "url_button_link_slide_2": "",
+        "text_button_text_slide_2": "Button text",
+        "text_subheading_slide_3": "Rolex",
+        "text_heading_slide_3": "Sky-Dweller",
+        "url_button_link_slide_3": "",
+        "text_button_text_slide_3": "Button text"
+      }
     },
     "featured_products": {
       "type": "featured_products",
@@ -126,6 +159,7 @@
   "order": [
     "image_with_text",
     "rolex_header_bjNKQ4",
+    "rolex_hero_slider_Xzyc9g",
     "featured_products",
     "featured_collections",
     "featured_collections_new_KtGURX",
